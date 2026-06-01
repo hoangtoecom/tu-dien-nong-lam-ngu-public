@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "nhan": "Bộ dữ liệu mẫu — demo cho buổi tọa đàm, không phải tài liệu chuẩn ngành",
+    "nhan": "",
     "capNhat": "2026-05-30"
   },
   "cay": [
@@ -350,9 +350,9 @@
       "linhVuc": "nong-nghiep",
       "hinhThai": "Cây bụi hoặc cây nhỏ cao 1,5-2 m (có thể tới 6 m); lá dài 4-15 cm, mặt lá bóng, mép gợn sóng; hoa trắng thơm hương nhài mọc thành cụm; quả hình bầu dục đỏ hoặc vàng.",
       "boPhanDung": "Quả (hạt) → cà phê rang xay; bã cà phê → phân bón hữu cơ.",
-      "baoTon": "Cây trồng phổ biến — không bị đe dọa; nhiều vùng bảo tồn tự nhiên ở Amazon.",
+      "baoTon": "Cây trồng phổ biến — không bị đe dọa.",
       "muaHoaQua": "Hoa trắng nở đầu vụ; quả chín sau khoảng 9 tháng kể từ khi ra hoa.",
-      "baoTonCap": "NT"
+      "baoTonCap": ""
     },
     {
       "id": "cao-su",
@@ -772,7 +772,7 @@
       "boPhanDung": "Hạt lên men phơi khô → bột ca cao, sô cô la, bơ ca cao; vỏ → phân bón; cơm quả → nước ca cao.",
       "baoTon": "Cây trồng phổ biến — IUCN chưa đánh giá; còn nhiều vùng bảo tồn; dự báo điều kiện khí hậu kém thuận lợi hơn vào năm 2050.",
       "muaHoaQua": "Ra hoa quanh năm; quả chín sau 5-6 tháng kể từ khi ra hoa.",
-      "baoTonCap": "NT"
+      "baoTonCap": ""
     },
     {
       "id": "thanh-long",
@@ -5282,7 +5282,7 @@
       "boPhanDung": "Lá non → ăn rau; gỗ cứng → làm xà, khung nhà (nay đã hiếm).",
       "baoTon": "Hiếm và bị đe dọa — phân bố hạn chế ở Ba Bể và vùng Bắc Trung Bộ.",
       "muaHoaQua": "Ra hoa tháng 5-6; quả chín tháng 8-10.",
-      "baoTonCap": ""
+      "baoTonCap": "VU"
     },
     {
       "id": "tau",
@@ -6734,7 +6734,7 @@
       "boPhanDung": "Lá và gỗ chứa long não (camphor) dùng trong y học và làm hương; lâu nay khai thác chiết tinh dầu.",
       "baoTon": "IUCN chưa đánh giá (một số nước xếp Vulnerable đến Endangered). Ở Việt Nam là cây trồng phổ biến.",
       "muaHoaQua": "Ra hoa tháng 4-5; quả chín tháng 11-1 (mùa lạnh).",
-      "baoTonCap": "EN"
+      "baoTonCap": ""
     },
     {
       "id": "bo-sua",
@@ -7659,7 +7659,7 @@
       "nangSuat": "—",
       "giaTri": "Gỗ mun đen quý hiếm, giá rất cao; biểu tượng của đồ gỗ mỹ nghệ cao cấp.",
       "boPhanDung": "Lõi gỗ đen làm tượng, đồ mỹ nghệ, nhạc cụ.",
-      "baoTon": "Bị khai thác quá mức, thuộc nhóm nguy cấp cần bảo vệ ở Việt Nam.",
+      "baoTon": "IUCN Cực kỳ nguy cấp (CR); bị khai thác quá mức, thuộc nhóm gỗ quý cần bảo vệ ở Việt Nam.",
       "xuatXu": "Loài bản địa vùng núi đá khô Nam Trung Bộ Việt Nam.",
       "suThatThuVi": "Gỗ mun nặng tới mức chìm trong nước và để lâu càng đen bóng như sừng.",
       "mauDacTrung": [
@@ -7670,7 +7670,7 @@
       "linhVuc": "lam-nghiep",
       "anh": "img/mun.jpg",
       "anhChiTiet": "img/detail/mun.jpg",
-      "baoTonCap": "NT"
+      "baoTonCap": "CR"
     },
     {
       "id": "hoang-dan",
@@ -7978,7 +7978,7 @@
       },
       "ho": "Hươu nai (Cervidae)",
       "baoTon": "Toàn cầu Ít lo ngại (LC); riêng quần thể hoang dã ở Việt Nam gần như tuyệt chủng ngoài tự nhiên — đàn nuôi hiện là nguồn bảo tồn nguồn gen.",
-      "baoTonCap": "NT"
+      "baoTonCap": ""
     },
     {
       "id": "bo-cau",
@@ -8629,7 +8629,7 @@
       "linhVuc": "lam-nghiep",
       "anh": "img/duoc.jpg",
       "anhChiTiet": "img/detail/duoc.jpg",
-      "baoTonCap": "NT"
+      "baoTonCap": ""
     },
     {
       "id": "mam",
@@ -8669,7 +8669,7 @@
       "linhVuc": "lam-nghiep",
       "anh": "img/mam.jpg",
       "anhChiTiet": "img/detail/mam.jpg",
-      "baoTonCap": "NT"
+      "baoTonCap": ""
     },
     {
       "id": "ban",
@@ -8749,7 +8749,7 @@
       "linhVuc": "lam-nghiep",
       "anh": "img/vet.jpg",
       "anhChiTiet": "img/detail/vet.jpg",
-      "baoTonCap": "NT"
+      "baoTonCap": ""
     },
     {
       "id": "su",
@@ -8789,7 +8789,7 @@
       "linhVuc": "lam-nghiep",
       "anh": "img/su.jpg",
       "anhChiTiet": "img/detail/su.jpg",
-      "baoTonCap": "NT"
+      "baoTonCap": ""
     },
     {
       "id": "phuong-vi",

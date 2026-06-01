@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#2c5e39">
 <title>Từ Điển Nông Lâm Ngư</title>
-<meta name="description" content="Từ điển tra cứu cây trồng, vật nuôi và thủy sản phổ biến ở Việt Nam theo 4 lĩnh vực, kiểu bản khắc cổ. Bộ dữ liệu cho buổi tọa đàm AI tại ĐH Nông Lâm.">
+<meta name="description" content="Từ điển tra cứu cây trồng, vật nuôi và thủy sản phổ biến ở Việt Nam theo 4 lĩnh vực, kiểu bản khắc cổ. Mã nguồn mở.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -142,7 +142,7 @@ html{scroll-behavior:smooth}
 .os-band{background:var(--green-deep);color:#fff;border-radius:20px;padding:46px 40px;text-align:center;margin-top:46px;
   background-image:radial-gradient(circle at 12% 0,#ffffff10 0,transparent 45%),radial-gradient(circle at 90% 100%,#ffffff0d 0,transparent 45%)}
 .os-band .ck{font-family:var(--f-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--leaf)}
-.os-band h2{font-family:var(--f-body);font-weight:600;font-size:30px;margin-top:12px;line-height:1.22;max-width:24ch;margin-left:auto;margin-right:auto}
+.os-band h2{font-family:var(--f-body);font-weight:600;font-size:30px;margin-top:12px;line-height:1.22;max-width:24ch;margin-left:auto;margin-right:auto;text-wrap:balance}
 .os-band h2 em{font-style:italic;color:#e8c87a}
 .os-band p{opacity:.85;margin-top:14px;font-size:15.5px;max-width:54ch;margin-left:auto;margin-right:auto}
 .dl{display:flex;gap:12px;justify-content:center;align-items:center;flex-wrap:wrap;margin-top:24px}
@@ -452,6 +452,42 @@ footer b{color:var(--ink)}
   .fb-f select{width:100%;font-size:12.5px;padding:8px 28px 8px 12px}
   .fb-reset{margin-top:2px}
 }
+/* ===== Feedback 02-06: chữ lớn hơn (mobile + 2K), ảnh chi tiết mobile gọn, footer mã nguồn + donate ===== */
+@media(min-width:1600px){
+  .wrap,.search-wrap .si,.hero-inner{max-width:1200px}
+  .hero-copy .lead{font-size:19px}
+  .card-body h3{font-size:22px}.card-body .sci{font-size:15px}
+  .dt-sec p{font-size:17.5px}.dtf .dt-sec p{font-size:14.5px}.dt-bot p{font-size:16px}
+  .virtue li{font-size:16px}.fd-copy p{font-size:16.5px}.fd-bullets li{font-size:15px}
+}
+@media(max-width:640px){
+  .dtf .dt-sec p{font-size:15px;line-height:1.6}
+  .dt-sec p{font-size:16px}.dt-bot p{font-size:15px}
+  .card-body .sci{font-size:14px}.virtue li{font-size:15px}.fd-copy p{font-size:15.5px}
+  .dt-pic,.dt-pic img{max-height:46vh}
+}
+.foot-disc{font-size:12.5px;color:var(--mid);max-width:60ch;margin:0 auto 12px;line-height:1.65;font-style:italic;text-wrap:pretty}
+.foot-os{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:center;align-items:center;margin:20px auto 0}
+.foot-os a{display:inline-flex;align-items:center;gap:6px;color:var(--green-deep);text-decoration:none;font-family:var(--f-head);font-weight:600;font-size:13.5px}
+.foot-os a:hover{text-decoration:underline}.foot-os svg{width:17px;height:17px}
+.foot-dev{max-width:600px;margin:14px auto 0;text-align:left}
+.foot-dev>summary{cursor:pointer;font-family:var(--f-mono);font-size:11.5px;letter-spacing:.03em;color:var(--mid);text-align:center;list-style:revert}
+.foot-dev .dl-steps{margin-top:14px}.foot-dev .dl-steps li{color:var(--ink);opacity:1}
+.foot-dev .dl-steps code,.foot-dev .dl-cmd code{background:#1d2a200f;color:var(--ink)}
+.foot-dev .dl-cmd{background:#1d2a2008;border:1.5px solid var(--line2)}
+.foot-dev .dl-cmd code{color:var(--ink);max-width:62vw}
+.foot-dev .copybtn{background:#1d2a2012;color:var(--green-deep)}.foot-dev .copybtn:hover{background:#1d2a2022}
+.foot-donate{margin:26px auto 0;max-width:560px;display:flex;flex-direction:column;align-items:center;gap:14px}
+.foot-donate .dmsg{font-size:13.5px;line-height:1.65;color:var(--ink);text-align:center;text-wrap:pretty}
+.foot-donate .ds{font-size:11.5px;color:var(--mid);margin-top:8px;text-align:center}
+.foot-qr{width:150px;height:auto;flex:0 0 auto;display:block;border-radius:14px;border:1px solid var(--line);box-shadow:0 6px 18px rgba(29,42,32,.1)}
+@media(min-width:640px){
+  .foot-donate{flex-direction:row;align-items:center;justify-content:center;gap:24px;max-width:680px}
+  .foot-donate .fd-text{flex:1;min-width:0}
+  .foot-donate .dmsg,.foot-donate .ds{text-align:left}
+}
+.os-cta{display:inline-block;margin-top:20px;font-family:var(--f-head);font-weight:600;font-size:14px;color:#e8c87a;text-decoration:none;border-bottom:1.5px solid #e8c87a55;padding-bottom:3px;transition:.15s}
+.os-cta:hover{border-bottom-color:#e8c87a}
 </style>
 </head>
 <body>
@@ -483,7 +519,6 @@ footer b{color:var(--ink)}
     <button class="menu-link lv" data-act="thuy-san" style="--ac:#2e7d8a">Thủy sản</button>
     <button class="menu-link lv" data-act="sach-do" style="--ac:#c0392b">🔴 Nguy cấp – Sách Đỏ</button>
     <button class="menu-link" data-act="about">Giới thiệu &amp; mã nguồn</button>
-    <a class="menu-link" href="https://github.com/hoangtoecom/tu-dien-nong-lam-ngu-public" target="_blank" rel="noopener">GitHub ↗</a>
   </nav>
  </div>
 </header>
@@ -497,7 +532,7 @@ footer b{color:var(--ink)}
       <div class="hero-scrim"></div>
       <div class="hero-inner">
         <div class="hero-copy">
-          <div class="kick">Bách khoa Nông Lâm Ngư · Đại học Nông Lâm</div>
+          <div class="kick">Bách khoa Nông Lâm Ngư Việt Nam</div>
           <h1 class="hero-h1">Tra cứu Nông Lâm Ngư<span class="h1-sub">như lật một bản khắc cổ</span></h1>
           <p class="lead">180 loài cây trồng, vật nuôi &amp; thủy sản phổ biến ở Việt Nam — theo 4 lĩnh vực: trồng trọt, lâm nghiệp, chăn nuôi và thủy sản.</p>
           <div class="hero-cta">
@@ -529,30 +564,12 @@ footer b{color:var(--ink)}
     <div id="nhom" class="sec-h">Khám phá theo lĩnh vực</div>
     <div class="booksp" id="booksp"></div>
 
-    <!-- OPEN SOURCE + TAGLINE + DOWNLOAD -->
+    <!-- OPEN SOURCE + TAGLINE -->
     <div class="os-band" id="about">
-      <div class="ck">Mã nguồn mở</div>
-      <h2>Một người <em>ngoài ngành</em> dựng bộ từ điển này trong 2 ngày. Bạn — người <em>trong ngành</em> — sẽ đưa nó đi xa đến đâu?</h2>
-      <p>Toàn bộ là web app mã nguồn mở — tải về máy là chạy được ngay, không cần cài đặt, không cần mạng. <b>Không cần tài khoản GitHub, không cần đăng ký gì.</b></p>
-      <div class="dl">
-        <a class="dl-btn" href="https://github.com/hoangtoecom/tu-dien-nong-lam-ngu-public/archive/refs/heads/main.zip">↓ Tải về máy (file ZIP)</a>
-        <a class="dl-link2" href="https://github.com/hoangtoecom/tu-dien-nong-lam-ngu-public" target="_blank" rel="noopener">hoặc xem mã nguồn trên GitHub ↗</a>
-      </div>
-      <ol class="dl-steps">
-        <li><b>Bấm nút "Tải về máy (file ZIP)"</b> ở trên. Máy sẽ tự tải một file nén <code>.zip</code> về thư mục <b>Downloads</b> (Tải xuống). Không hiện trang GitHub, không cần đăng nhập.</li>
-        <li><b>Giải nén file vừa tải:</b> trên Mac bấm đúp vào file <code>.zip</code>; trên Windows bấm chuột phải → <b>Extract All</b> (Giải nén). Bạn sẽ được một thư mục.</li>
-        <li><b>Mở thư mục</b> <code>demo-tu-dien-nong-lam-ngu</code> bên trong, rồi <b>bấm đúp vào file <code>index.html</code></b>. Từ điển mở ngay trong trình duyệt và dùng được cả khi không có Internet.</li>
-      </ol>
-      <details class="dl-dev">
-        <summary>Dành cho người biết lập trình (tùy chọn)</summary>
-        <div class="dl-cmd">
-          <code id="cloneCmd">git clone https://github.com/hoangtoecom/tu-dien-nong-lam-ngu-public</code>
-          <button class="copybtn" id="copyClone" aria-label="Sao chép lệnh">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
-          </button>
-        </div>
-      </details>
-      <div class="dl-note">Chạy được trên Mac · Windows · Linux · không cần cài đặt · không cần Internet</div>
+      <div class="ck">Mở · Miễn phí</div>
+      <h2>Tra cứu Nông Lâm Ngư — <em>mã nguồn mở</em>. Mỗi đóng góp giúp bộ từ điển tốt hơn cho người sau.</h2>
+      <p>Toàn bộ là web tĩnh — ai cũng có thể xem cách làm, dùng lại và phát triển tiếp.</p>
+      <a class="os-cta" href="https://github.com/hoangtoecom/tu-dien-nong-lam-ngu-public" target="_blank" rel="noopener">Xem mã nguồn trên GitHub ↗</a>
     </div>
   </section>
 
@@ -570,7 +587,16 @@ footer b{color:var(--ink)}
 
   <footer>
     <div id="meta"></div>
-    <div>Dựng bằng AI cho buổi tọa đàm <b>AI Thực Chiến</b> · ĐH Nông Lâm TP.HCM · ViewSonic</div>
+    <p class="foot-disc">Thông tin trong từ điển được tổng hợp từ các nguồn mở (Wikipedia, tài liệu nông nghiệp...) và chỉ mang tính tham khảo, không thay thế tư vấn chuyên môn. Mọi góp ý chỉnh sửa đều được hoan nghênh.</p>
+
+    <!-- Donate -->
+    <div class="foot-donate">
+      <div class="fd-text">
+        <p class="dmsg">☕ Mình dành 2 ngày dựng bộ từ điển này nhờ sự hỗ trợ của AI, và chia sẻ miễn phí cho cộng đồng. Nếu nó giúp ích cho bạn, một ly cà phê sẽ tiếp thêm động lực cho mình ở những dự án tới.</p>
+        <div class="ds">Techcombank · TO VU HOANG · quét bằng app ngân hàng</div>
+      </div>
+      <img class="foot-qr" src="img/qr-donate.png" alt="Mã QR ủng hộ qua Techcombank — TO VU HOANG" loading="lazy" width="150">
+    </div>
   </footer>
 </div>
 
@@ -584,7 +610,7 @@ footer b{color:var(--ink)}
 <script id="cay-data" type="application/json">
 {
   "_meta": {
-    "nhan": "Bộ dữ liệu mẫu — demo cho buổi tọa đàm, không phải tài liệu chuẩn ngành",
+    "nhan": "",
     "capNhat": "2026-05-30"
   },
   "cay": [
@@ -934,9 +960,9 @@ footer b{color:var(--ink)}
       "linhVuc": "nong-nghiep",
       "hinhThai": "Cây bụi hoặc cây nhỏ cao 1,5-2 m (có thể tới 6 m); lá dài 4-15 cm, mặt lá bóng, mép gợn sóng; hoa trắng thơm hương nhài mọc thành cụm; quả hình bầu dục đỏ hoặc vàng.",
       "boPhanDung": "Quả (hạt) → cà phê rang xay; bã cà phê → phân bón hữu cơ.",
-      "baoTon": "Cây trồng phổ biến — không bị đe dọa; nhiều vùng bảo tồn tự nhiên ở Amazon.",
+      "baoTon": "Cây trồng phổ biến — không bị đe dọa.",
       "muaHoaQua": "Hoa trắng nở đầu vụ; quả chín sau khoảng 9 tháng kể từ khi ra hoa.",
-      "baoTonCap": "NT"
+      "baoTonCap": ""
     },
     {
       "id": "cao-su",
@@ -1356,7 +1382,7 @@ footer b{color:var(--ink)}
       "boPhanDung": "Hạt lên men phơi khô → bột ca cao, sô cô la, bơ ca cao; vỏ → phân bón; cơm quả → nước ca cao.",
       "baoTon": "Cây trồng phổ biến — IUCN chưa đánh giá; còn nhiều vùng bảo tồn; dự báo điều kiện khí hậu kém thuận lợi hơn vào năm 2050.",
       "muaHoaQua": "Ra hoa quanh năm; quả chín sau 5-6 tháng kể từ khi ra hoa.",
-      "baoTonCap": "NT"
+      "baoTonCap": ""
     },
     {
       "id": "thanh-long",
@@ -5866,7 +5892,7 @@ footer b{color:var(--ink)}
       "boPhanDung": "Lá non → ăn rau; gỗ cứng → làm xà, khung nhà (nay đã hiếm).",
       "baoTon": "Hiếm và bị đe dọa — phân bố hạn chế ở Ba Bể và vùng Bắc Trung Bộ.",
       "muaHoaQua": "Ra hoa tháng 5-6; quả chín tháng 8-10.",
-      "baoTonCap": ""
+      "baoTonCap": "VU"
     },
     {
       "id": "tau",
@@ -7318,7 +7344,7 @@ footer b{color:var(--ink)}
       "boPhanDung": "Lá và gỗ chứa long não (camphor) dùng trong y học và làm hương; lâu nay khai thác chiết tinh dầu.",
       "baoTon": "IUCN chưa đánh giá (một số nước xếp Vulnerable đến Endangered). Ở Việt Nam là cây trồng phổ biến.",
       "muaHoaQua": "Ra hoa tháng 4-5; quả chín tháng 11-1 (mùa lạnh).",
-      "baoTonCap": "EN"
+      "baoTonCap": ""
     },
     {
       "id": "bo-sua",
@@ -8243,7 +8269,7 @@ footer b{color:var(--ink)}
       "nangSuat": "—",
       "giaTri": "Gỗ mun đen quý hiếm, giá rất cao; biểu tượng của đồ gỗ mỹ nghệ cao cấp.",
       "boPhanDung": "Lõi gỗ đen làm tượng, đồ mỹ nghệ, nhạc cụ.",
-      "baoTon": "Bị khai thác quá mức, thuộc nhóm nguy cấp cần bảo vệ ở Việt Nam.",
+      "baoTon": "IUCN Cực kỳ nguy cấp (CR); bị khai thác quá mức, thuộc nhóm gỗ quý cần bảo vệ ở Việt Nam.",
       "xuatXu": "Loài bản địa vùng núi đá khô Nam Trung Bộ Việt Nam.",
       "suThatThuVi": "Gỗ mun nặng tới mức chìm trong nước và để lâu càng đen bóng như sừng.",
       "mauDacTrung": [
@@ -8254,7 +8280,7 @@ footer b{color:var(--ink)}
       "linhVuc": "lam-nghiep",
       "anh": "img/mun.webp",
       "anhChiTiet": "img/detail/mun.webp",
-      "baoTonCap": "NT"
+      "baoTonCap": "CR"
     },
     {
       "id": "hoang-dan",
@@ -8562,7 +8588,7 @@ footer b{color:var(--ink)}
       },
       "ho": "Hươu nai (Cervidae)",
       "baoTon": "Toàn cầu Ít lo ngại (LC); riêng quần thể hoang dã ở Việt Nam gần như tuyệt chủng ngoài tự nhiên — đàn nuôi hiện là nguồn bảo tồn nguồn gen.",
-      "baoTonCap": "NT"
+      "baoTonCap": ""
     },
     {
       "id": "bo-cau",
@@ -9213,7 +9239,7 @@ footer b{color:var(--ink)}
       "linhVuc": "lam-nghiep",
       "anh": "img/duoc.webp",
       "anhChiTiet": "img/detail/duoc.webp",
-      "baoTonCap": "NT"
+      "baoTonCap": ""
     },
     {
       "id": "mam",
@@ -9253,7 +9279,7 @@ footer b{color:var(--ink)}
       "linhVuc": "lam-nghiep",
       "anh": "img/mam.webp",
       "anhChiTiet": "img/detail/mam.webp",
-      "baoTonCap": "NT"
+      "baoTonCap": ""
     },
     {
       "id": "ban",
@@ -9333,7 +9359,7 @@ footer b{color:var(--ink)}
       "linhVuc": "lam-nghiep",
       "anh": "img/vet.webp",
       "anhChiTiet": "img/detail/vet.webp",
-      "baoTonCap": "NT"
+      "baoTonCap": ""
     },
     {
       "id": "su",
@@ -9373,7 +9399,7 @@ footer b{color:var(--ink)}
       "linhVuc": "lam-nghiep",
       "anh": "img/su.webp",
       "anhChiTiet": "img/detail/su.webp",
-      "baoTonCap": "NT"
+      "baoTonCap": ""
     },
     {
       "id": "phuong-vi",
@@ -10344,6 +10370,8 @@ const boDau = s => (s||"").normalize('NFD').replace(/[\u0300-\u036f]/g,'').repla
 // tìm kiếm: bỏ dấu + nhiều từ khoá (AND) + quét cả nội dung; loài khớp ở TÊN xếp lên đầu
 function timKiem(ds, q){
   const toks = boDau(q).split(/\s+/).filter(Boolean); if(!toks.length) return ds;
+  // token GIỮ DẤU (chỉ hạ chữ thường) để cộng điểm ưu tiên khớp đúng dấu tiếng Việt
+  const toksRaw = (q||'').toLowerCase().trim().split(/\s+/).filter(Boolean);
   // khớp theo ĐẦU TỪ (word-start), không khớp chuỗi con giữa từ —
   // để "gà" ra "gà" chứ không lọt vào "panGAsius", "vulGAris"…
   const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -10358,14 +10386,22 @@ function timKiem(ds, q){
     .map(c => {
       const tn = boDau(c.ten);
       const words = tn.split(/\s+/);
+      const tnRaw = (c.ten || '').toLowerCase();
+      const wordsRaw = tnRaw.split(/\s+/);
       let s = 0;
-      if (tn === toks.join(' ')) s += 100;            // trùng khít tên tiếng Việt (vd "lúa")
+      if (tn === toks.join(' ')) s += 100;            // trùng khít tên (bỏ dấu), vd "lua" → "lúa"
+      if (tnRaw === toksRaw.join(' ')) s += 150;      // trùng khít CÓ DẤU → ưu tiên cao nhất (vd "cà" ≠ "cá")
       res.forEach((re, i) => {
         const t = toks[i];
-        if (words[0] && words[0].startsWith(t)) s += 60;          // token mở đầu TỪ ĐẦU TIÊN của tên (vd "cá" → "Cá basa")
-        else if (words.some(w => w.startsWith(t))) s += 22;       // token mở đầu một từ sau trong tên (vd "cải" trong "bắp cải")
-        else if (hit(re, c._sName)) s += 8;                       // chỉ khớp tên khác / tên khoa học
-        else s += 1;                                              // chỉ khớp trong nội dung
+        const tr = toksRaw[i] || '';
+        if (words[0] && words[0].startsWith(t)) {
+          s += 60;                                                 // token mở đầu TỪ ĐẦU TIÊN của tên (bỏ dấu)
+          if (wordsRaw[0] && wordsRaw[0].startsWith(tr)) s += 80;  // ...và khớp ĐÚNG DẤU → đẩy "cà chua/cà phê" lên trên "cá/ca cao"
+        } else if (words.some(w => w.startsWith(t))) {
+          s += 22;                                                 // token mở đầu một từ sau trong tên (vd "cải" trong "bắp cải")
+          if (wordsRaw.some(w => w.startsWith(tr))) s += 30;       // khớp đúng dấu ở từ sau
+        } else if (hit(re, c._sName)) s += 8;                      // chỉ khớp tên khác / tên khoa học
+        else s += 1;                                               // chỉ khớp trong nội dung
       });
       return { c, s };
     })
@@ -10686,7 +10722,7 @@ function openDetail(id, dir){
         <div class="dtf-body">${bodyHtml}
         </div>
         ${tl?`<div class="dtf-tl"><div class="ph3">Lịch sinh trưởng</div><div class="tlh">${tl}</div></div>`:''}
-        <div class="dtf-foot">${sw?`Màu đặc trưng: ${sw} · `:''}Từ điển Nông Lâm Ngư · ĐH Nông Lâm${c.nguon?` · <a class="src" href="${c.nguon}" target="_blank" rel="noopener">Nguồn ↗</a>`:''} · ⚠️ Dữ liệu mẫu cho buổi tọa đàm</div>
+        <div class="dtf-foot">${sw?`Màu đặc trưng: ${sw} · `:''}Từ điển Nông Lâm Ngư${c.nguon?` · <a class="src" href="${c.nguon}" target="_blank" rel="noopener">Nguồn ↗</a>`:''}</div>
       </div>
     </div>`;
   // dialog có tên (cho trình đọc màn hình) = tên loài
@@ -10850,10 +10886,6 @@ $('featGrid').addEventListener('click', e=>{
 });
 $('featDetail').addEventListener('click', e=>{ const b=e.target.closest('[data-open]'); if(b){ openDetail(b.dataset.open); return; } if(e.target.closest('.fd-close')||e.target===$('featDetail')){ $('featDetail').hidden=true; document.querySelectorAll('.feat-card').forEach(c=>c.classList.remove('active')); curFeat=null; } });
 { const ts=$('trySample'); if(ts) ts.addEventListener('click', ()=>{ if(DATA.length) openDetail((DATA.find(x=>x.id==='ca-phe')||DATA[0]).id); }); }
-$('copyClone').addEventListener('click', ()=>{
-  const cmd=$('cloneCmd').textContent; const btn=$('copyClone');
-  navigator.clipboard?.writeText(cmd).then(()=>{ btn.classList.add('ok'); setTimeout(()=>btn.classList.remove('ok'),1400); });
-});
 // nút lật trang ‹ › trong sheet
 $('sheet').addEventListener('click', e=>{ if(e.target.closest('.dt-nav.prev')) detailNav(-1); else if(e.target.closest('.dt-nav.next')) detailNav(1); });
 // phím mũi tên ←/→ lật trang khi đang mở chi tiết; Esc đóng

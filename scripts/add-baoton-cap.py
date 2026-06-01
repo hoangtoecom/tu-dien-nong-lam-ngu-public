@@ -9,18 +9,26 @@ BASE = os.path.join(os.path.dirname(__file__), '..')
 F = os.path.join(BASE, 'data', 'tu-dien-nong-lam-ngu.json')
 
 def da(s):
-    return ''.join(c for c in unicodedata.normalize('NFD', str(s)) if unicodedata.category(c) != 'Mn').lower()
+    # bỏ dấu tiếng Việt; xử lý cả 'đ/Đ' (NFD không tách được ký tự này)
+    s = str(s).replace('đ', 'd').replace('Đ', 'D')
+    return ''.join(c for c in unicodedata.normalize('NFD', s) if unicodedata.category(c) != 'Mn').lower()
 
 def cap_of(text):
     t = da(text)
+    # Lá chắn dương tính: text nói rõ KHÔNG bị đe dọa / IUCN chưa đánh giá / Ít lo ngại
+    # → không gắn cờ, kể cả khi có chữ "bảo tồn/bảo vệ" mang nghĩa tốt (vùng bảo tồn, rừng phòng hộ).
+    if any(k in t for k in ['chua danh gia', 'khong bi de doa', 'khong de doa', 'it lo ngai',
+                            'least concern', 'chua ro', 'can kiem chung']):
+        return ''
     if 'cuc ky nguy cap' in t or 'critically' in t or '(cr)' in t:
         return 'CR'
     if 'endangered' in t or '(en)' in t or 'nguy cap (en' in t:
         return 'EN'
     if 'vulnerable' in t or '(vu)' in t or 'se nguy cap' in t or 'sap nguy cap' in t:
         return 'VU'
-    # còn dấu hiệu bảo vệ nhưng không rõ hạng IUCN → Sắp bị đe dọa
-    if any(k in t for k in ['cites', 'nghi dinh', 'sach do', 'nguy cap', 'bao ton', 'bao ve']):
+    # Có căn cứ pháp lý/Sách Đỏ thực sự → Sắp bị đe dọa.
+    # KHÔNG dùng 'bao ton'/'bao ve' làm tín hiệu: chúng thường là "vùng bảo tồn"/"rừng được bảo vệ" (nghĩa tốt).
+    if any(k in t for k in ['cites', 'nghi dinh', 'sach do', 'nguy cap']):
         return 'NT'
     return ''
 
@@ -37,7 +45,7 @@ def main():
         if cap in ('VU', 'EN', 'CR', 'NT'):
             out.append(f"{cap}\t{x['id']}\t{x.get('ten','')}")
     # hiệu chỉnh tay loài đặc biệt
-    fix = {'vu-huong': 'CR', 'thong-nuoc': 'CR'}
+    fix = {'vu-huong': 'CR', 'thong-nuoc': 'CR', 'mun': 'CR', 'dinh': 'VU'}
     by = {x['id']: x for x in items}
     for cid, cap in fix.items():
         if cid in by:
