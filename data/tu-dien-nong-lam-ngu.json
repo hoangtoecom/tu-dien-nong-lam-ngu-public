@@ -8589,7 +8589,7 @@
       },
       "ho": "Ba ba (Trionychidae)",
       "baoTon": "Sắp nguy cấp (VU) theo IUCN do khai thác quá mức ngoài tự nhiên; nuôi thương mại phổ biến tại Việt Nam.",
-      "baoTonCap": "VU"
+      "baoTonCap": ""
     },
     {
       "id": "duoc",
@@ -9133,7 +9133,7 @@
       },
       "ho": "Hươu nai (Cervidae)",
       "baoTon": "Sắp nguy cấp (VU) theo IUCN; suy giảm ngoài tự nhiên ở Việt Nam do săn bắt và mất sinh cảnh. Gây nuôi cần nguồn gốc hợp pháp.",
-      "baoTonCap": "VU"
+      "baoTonCap": ""
     },
     {
       "id": "cay-voi-huong",
@@ -9205,7 +9205,7 @@
       },
       "ho": "Cá sấu (Crocodylidae)",
       "baoTon": "Cực kỳ nguy cấp (CR) theo IUCN; CITES Phụ lục I với quần thể hoang dã (trại nuôi đăng ký thuộc Phụ lục II); Sách Đỏ Việt Nam. Cá thể nuôi thương mại phải có nguồn gốc hợp pháp.",
-      "baoTonCap": "CR"
+      "baoTonCap": ""
     },
     {
       "id": "ran-ho-trau",
@@ -9241,7 +9241,7 @@
       },
       "ho": "Rắn nước (Colubridae)",
       "baoTon": "CITES Phụ lục II; Việt Nam liệt kê trong danh mục động vật rừng nguy cấp, quý, hiếm (nhóm IIB). Bị khai thác mạnh, gây nuôi cần đăng ký.",
-      "baoTonCap": "NT"
+      "baoTonCap": ""
     },
     {
       "id": "ky-da",
@@ -9277,7 +9277,7 @@
       },
       "ho": "Kỳ đà (Varanidae)",
       "baoTon": "CITES Phụ lục II; Việt Nam nhóm IIB (Nghị định 84/2021). IUCN Ít lo ngại nhưng bị săn bắt nhiều — gây nuôi phải đăng ký.",
-      "baoTonCap": "NT"
+      "baoTonCap": ""
     },
     {
       "id": "tran",
@@ -9313,7 +9313,7 @@
       },
       "ho": "Trăn (Pythonidae)",
       "baoTon": "Sắp nguy cấp (VU) theo IUCN; CITES Phụ lục II; Việt Nam nhóm IIB (Nghị định 84/2021). Nuôi thương mại cần đăng ký trại nuôi.",
-      "baoTonCap": "VU"
+      "baoTonCap": ""
     },
     {
       "id": "tac-ke",
@@ -9349,7 +9349,7 @@
       },
       "ho": "Tắc kè (Gekkonidae)",
       "baoTon": "CITES Phụ lục II (từ 2019); bị khai thác mạnh làm dược liệu nên quần thể tự nhiên suy giảm. Gây nuôi cần tuân thủ quy định.",
-      "baoTonCap": "NT"
+      "baoTonCap": ""
     },
     {
       "id": "ca-mu",

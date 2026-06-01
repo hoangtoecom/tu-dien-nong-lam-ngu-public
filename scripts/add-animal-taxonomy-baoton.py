@@ -102,7 +102,10 @@ def main():
         if not str(x.get('ho', '')).strip():
             x['ho'] = ho
         x['baoTon'] = baoTon
-        x['baoTonCap'] = cap
+        # Vật nuôi thương mại KHÔNG gắn cờ bảo tồn: cờ IUCN theo quần thể HOANG DÃ
+        # gây hiểu nhầm trong từ điển chăn nuôi/thủy sản (loài nuôi vốn phổ biến).
+        # Phần text baoTon vẫn giữ (nêu rõ tình trạng hoang dã vs nuôi thương mại).
+        x['baoTonCap'] = ''
         done += 1
     d['_meta']['capNhat'] = '2026-05-30'
     json.dump(d, open(F, 'w', encoding='utf-8'), ensure_ascii=False, indent=2)

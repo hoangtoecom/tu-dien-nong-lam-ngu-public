@@ -482,8 +482,8 @@ footer b{color:var(--ink)}
 .foot-donate .ds{font-size:11.5px;color:var(--mid);margin-top:8px;text-align:center}
 .foot-qr{width:150px;height:auto;flex:0 0 auto;display:block;border-radius:14px;border:1px solid var(--line);box-shadow:0 6px 18px rgba(29,42,32,.1)}
 @media(min-width:640px){
-  .foot-donate{flex-direction:row;align-items:center;justify-content:center;gap:24px;max-width:680px}
-  .foot-donate .fd-text{flex:1;min-width:0}
+  .foot-donate{flex-direction:row;align-items:center;justify-content:center;gap:24px;max-width:600px}
+  .foot-donate .fd-text{max-width:330px}
   .foot-donate .dmsg,.foot-donate .ds{text-align:left}
 }
 .os-cta{display:inline-block;margin-top:20px;font-family:var(--f-head);font-weight:600;font-size:14px;color:#e8c87a;text-decoration:none;border-bottom:1.5px solid #e8c87a55;padding-bottom:3px;transition:.15s}
@@ -567,8 +567,8 @@ footer b{color:var(--ink)}
     <!-- OPEN SOURCE + TAGLINE -->
     <div class="os-band" id="about">
       <div class="ck">Mở · Miễn phí</div>
-      <h2>Tra cứu Nông Lâm Ngư — <em>mã nguồn mở</em>. Mỗi đóng góp giúp bộ từ điển tốt hơn cho người sau.</h2>
-      <p>Toàn bộ là web tĩnh — ai cũng có thể xem cách làm, dùng lại và phát triển tiếp.</p>
+      <h2>Tra cứu Nông Lâm Ngư, <em>mã nguồn mở</em>. Mỗi đóng góp giúp bộ từ điển tốt hơn cho người sau.</h2>
+      <p>Toàn bộ là web tĩnh, ai cũng có thể xem cách làm, dùng lại và phát triển tiếp.</p>
       <a class="os-cta" href="https://github.com/hoangtoecom/tu-dien-nong-lam-ngu-public" target="_blank" rel="noopener">Xem mã nguồn trên GitHub ↗</a>
     </div>
   </section>
@@ -588,15 +588,6 @@ footer b{color:var(--ink)}
   <footer>
     <div id="meta"></div>
     <p class="foot-disc">Thông tin trong từ điển được tổng hợp từ các nguồn mở (Wikipedia, tài liệu nông nghiệp...) và chỉ mang tính tham khảo, không thay thế tư vấn chuyên môn. Mọi góp ý chỉnh sửa đều được hoan nghênh.</p>
-
-    <!-- Donate -->
-    <div class="foot-donate">
-      <div class="fd-text">
-        <p class="dmsg">☕ Mình dành 2 ngày dựng bộ từ điển này nhờ sự hỗ trợ của AI, và chia sẻ miễn phí cho cộng đồng. Nếu nó giúp ích cho bạn, một ly cà phê sẽ tiếp thêm động lực cho mình ở những dự án tới.</p>
-        <div class="ds">Techcombank · TO VU HOANG · quét bằng app ngân hàng</div>
-      </div>
-      <img class="foot-qr" src="img/qr-donate.png" alt="Mã QR ủng hộ qua Techcombank — TO VU HOANG" loading="lazy" width="150">
-    </div>
   </footer>
 </div>
 
@@ -9199,7 +9190,7 @@ footer b{color:var(--ink)}
       },
       "ho": "Ba ba (Trionychidae)",
       "baoTon": "Sắp nguy cấp (VU) theo IUCN do khai thác quá mức ngoài tự nhiên; nuôi thương mại phổ biến tại Việt Nam.",
-      "baoTonCap": "VU"
+      "baoTonCap": ""
     },
     {
       "id": "duoc",
@@ -9743,7 +9734,7 @@ footer b{color:var(--ink)}
       },
       "ho": "Hươu nai (Cervidae)",
       "baoTon": "Sắp nguy cấp (VU) theo IUCN; suy giảm ngoài tự nhiên ở Việt Nam do săn bắt và mất sinh cảnh. Gây nuôi cần nguồn gốc hợp pháp.",
-      "baoTonCap": "VU"
+      "baoTonCap": ""
     },
     {
       "id": "cay-voi-huong",
@@ -9815,7 +9806,7 @@ footer b{color:var(--ink)}
       },
       "ho": "Cá sấu (Crocodylidae)",
       "baoTon": "Cực kỳ nguy cấp (CR) theo IUCN; CITES Phụ lục I với quần thể hoang dã (trại nuôi đăng ký thuộc Phụ lục II); Sách Đỏ Việt Nam. Cá thể nuôi thương mại phải có nguồn gốc hợp pháp.",
-      "baoTonCap": "CR"
+      "baoTonCap": ""
     },
     {
       "id": "ran-ho-trau",
@@ -9851,7 +9842,7 @@ footer b{color:var(--ink)}
       },
       "ho": "Rắn nước (Colubridae)",
       "baoTon": "CITES Phụ lục II; Việt Nam liệt kê trong danh mục động vật rừng nguy cấp, quý, hiếm (nhóm IIB). Bị khai thác mạnh, gây nuôi cần đăng ký.",
-      "baoTonCap": "NT"
+      "baoTonCap": ""
     },
     {
       "id": "ky-da",
@@ -9887,7 +9878,7 @@ footer b{color:var(--ink)}
       },
       "ho": "Kỳ đà (Varanidae)",
       "baoTon": "CITES Phụ lục II; Việt Nam nhóm IIB (Nghị định 84/2021). IUCN Ít lo ngại nhưng bị săn bắt nhiều — gây nuôi phải đăng ký.",
-      "baoTonCap": "NT"
+      "baoTonCap": ""
     },
     {
       "id": "tran",
@@ -9923,7 +9914,7 @@ footer b{color:var(--ink)}
       },
       "ho": "Trăn (Pythonidae)",
       "baoTon": "Sắp nguy cấp (VU) theo IUCN; CITES Phụ lục II; Việt Nam nhóm IIB (Nghị định 84/2021). Nuôi thương mại cần đăng ký trại nuôi.",
-      "baoTonCap": "VU"
+      "baoTonCap": ""
     },
     {
       "id": "tac-ke",
@@ -9959,7 +9950,7 @@ footer b{color:var(--ink)}
       },
       "ho": "Tắc kè (Gekkonidae)",
       "baoTon": "CITES Phụ lục II (từ 2019); bị khai thác mạnh làm dược liệu nên quần thể tự nhiên suy giảm. Gây nuôi cần tuân thủ quy định.",
-      "baoTonCap": "NT"
+      "baoTonCap": ""
     },
     {
       "id": "ca-mu",
