@@ -488,6 +488,17 @@ footer b{color:var(--ink)}
 }
 .os-cta{display:inline-block;margin-top:20px;font-family:var(--f-head);font-weight:600;font-size:14px;color:#e8c87a;text-decoration:none;border-bottom:1.5px solid #e8c87a55;padding-bottom:3px;transition:.15s}
 .os-cta:hover{border-bottom-color:#e8c87a}
+/* Donate + disclaimer gộp trong khối xanh */
+.os-donate{margin:30px auto 0;max-width:620px;display:flex;flex-direction:column;align-items:center;gap:16px;padding-top:28px;border-top:1px solid rgba(255,255,255,.16)}
+.os-donate .od-msg{font-size:14px;line-height:1.6;color:rgba(255,255,255,.92);text-wrap:pretty}
+.os-donate .od-bank{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.02em;color:rgba(255,255,255,.6);margin-top:9px}
+.os-qr{width:148px;height:auto;flex:0 0 auto;display:block;border-radius:14px;box-shadow:0 8px 22px rgba(0,0,0,.28)}
+@media(min-width:640px){
+  .os-donate{flex-direction:row;align-items:center;justify-content:center;gap:26px}
+  .os-donate .od-text{max-width:330px;text-align:left}
+  .os-donate .od-msg,.os-donate .od-bank{text-align:left}
+}
+.os-disc{margin:24px auto 0;max-width:60ch;font-size:11.5px;font-style:italic;line-height:1.6;color:rgba(255,255,255,.55);text-wrap:pretty}
 </style>
 </head>
 <body>
@@ -564,12 +575,14 @@ footer b{color:var(--ink)}
     <div id="nhom" class="sec-h">Khám phá theo lĩnh vực</div>
     <div class="booksp" id="booksp"></div>
 
-    <!-- OPEN SOURCE + TAGLINE -->
+    <!-- OPEN SOURCE + TAGLINE + DONATE + DISCLAIMER (gộp chung 1 khối) -->
     <div class="os-band" id="about">
       <div class="ck">Mở · Miễn phí</div>
       <h2>Tra cứu Nông Lâm Ngư, <em>mã nguồn mở</em>. Mỗi đóng góp giúp bộ từ điển tốt hơn cho người sau.</h2>
       <p>Toàn bộ là web tĩnh, ai cũng có thể xem cách làm, dùng lại và phát triển tiếp.</p>
       <a class="os-cta" href="https://github.com/hoangtoecom/tu-dien-nong-lam-ngu-public" target="_blank" rel="noopener">Xem mã nguồn trên GitHub ↗</a>
+
+      <p class="os-disc">Thông tin trong từ điển được tổng hợp từ các nguồn mở (Wikipedia, tài liệu nông nghiệp...) và chỉ mang tính tham khảo, không thay thế tư vấn chuyên môn. Mọi góp ý chỉnh sửa đều được hoan nghênh.</p>
     </div>
   </section>
 
@@ -585,10 +598,7 @@ footer b{color:var(--ink)}
     <div class="grid" id="grid" hidden></div>
   </section>
 
-  <footer>
-    <div id="meta"></div>
-    <p class="foot-disc">Thông tin trong từ điển được tổng hợp từ các nguồn mở (Wikipedia, tài liệu nông nghiệp...) và chỉ mang tính tham khảo, không thay thế tư vấn chuyên môn. Mọi góp ý chỉnh sửa đều được hoan nghênh.</p>
-  </footer>
+  <footer style="display:none"><div id="meta"></div></footer>
 </div>
 
 <div class="overlay" id="overlay" aria-hidden="true">
