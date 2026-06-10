@@ -486,19 +486,12 @@ footer b{color:var(--ink)}
   .foot-donate .fd-text{max-width:330px}
   .foot-donate .dmsg,.foot-donate .ds{text-align:left}
 }
-.os-cta{display:inline-block;margin-top:20px;font-family:var(--f-head);font-weight:600;font-size:14px;color:#e8c87a;text-decoration:none;border-bottom:1.5px solid #e8c87a55;padding-bottom:3px;transition:.15s}
-.os-cta:hover{border-bottom-color:#e8c87a}
-/* Donate + disclaimer gộp trong khối xanh */
-.os-donate{margin:30px auto 0;max-width:620px;display:flex;flex-direction:column;align-items:center;gap:16px;padding-top:28px;border-top:1px solid rgba(255,255,255,.16)}
-.os-donate .od-msg{font-size:14px;line-height:1.6;color:rgba(255,255,255,.92);text-wrap:pretty}
-.os-donate .od-bank{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.02em;color:rgba(255,255,255,.6);margin-top:9px}
-.os-qr{width:148px;height:auto;flex:0 0 auto;display:block;border-radius:14px;box-shadow:0 8px 22px rgba(0,0,0,.28)}
-@media(min-width:640px){
-  .os-donate{flex-direction:row;align-items:center;justify-content:center;gap:26px}
-  .os-donate .od-text{max-width:330px;text-align:left}
-  .os-donate .od-msg,.os-donate .od-bank{text-align:left}
-}
-.os-disc{margin:24px auto 0;max-width:60ch;font-size:11.5px;font-style:italic;line-height:1.6;color:rgba(255,255,255,.55);text-wrap:pretty}
+.os-band .os-note{margin:20px auto 0;max-width:58ch;font-size:14px;line-height:1.65;color:rgba(255,255,255,.74);text-wrap:pretty}
+.os-links{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;justify-content:center;margin-top:22px}
+.os-link{display:inline-flex;align-items:center;min-height:36px;font-family:var(--f-head);font-weight:600;font-size:14px;color:#e8c87a;text-decoration:none;border-bottom:1.5px solid #e8c87a55;padding-bottom:3px;transition:.15s}
+.os-link:hover{border-bottom-color:#e8c87a}
+.os-band .os-credit{margin:24px auto 0;max-width:56ch;font-size:13.5px;line-height:1.65;color:rgba(255,255,255,.7);text-wrap:pretty}
+.os-band .os-disc{margin:18px auto 0;max-width:62ch;font-size:12.5px;font-style:italic;line-height:1.65;color:rgba(255,255,255,.6);text-wrap:pretty}
 </style>
 </head>
 <body>
@@ -578,10 +571,14 @@ footer b{color:var(--ink)}
     <!-- OPEN SOURCE + TAGLINE + DONATE + DISCLAIMER (gộp chung 1 khối) -->
     <div class="os-band" id="about">
       <div class="ck">Mở · Miễn phí</div>
-      <h2>Tra cứu Nông Lâm Ngư, <em>mã nguồn mở</em>. Mỗi đóng góp về dữ liệu, thông tin hay trải nghiệm đều giúp bộ từ điển tốt hơn cho người sau.</h2>
-      <a class="os-cta" href="https://github.com/hoangtoecom/tu-dien-nong-lam-ngu-public" target="_blank" rel="noopener">Xem mã nguồn trên GitHub ↗</a>
-
-      <p class="os-disc">Thông tin trong từ điển được tổng hợp từ các nguồn mở (Wikipedia, tài liệu nông nghiệp...) và chỉ mang tính tham khảo, không thay thế tư vấn chuyên môn. Mọi góp ý chỉnh sửa đều được hoan nghênh.</p>
+      <h2>Một bản tra cứu mở cho người học và người làm nông - lâm - ngư.</h2>
+      <p class="os-note">Dữ liệu đang được tiếp tục rà soát và bổ sung. Nội dung chỉ dùng để tham khảo, không thay thế tài liệu chuyên ngành hay tư vấn của chuyên gia.</p>
+      <div class="os-links">
+        <a class="os-link" href="https://github.com/hoangtoecom/tu-dien-nong-lam-ngu-public/issues/new" target="_blank" rel="noopener">Góp ý dữ liệu</a>
+        <a class="os-link" href="https://github.com/hoangtoecom/tu-dien-nong-lam-ngu-public" target="_blank" rel="noopener">Xem mã nguồn</a>
+      </div>
+      <p class="os-credit">Thực hiện bởi Hoàng Tô. Mở mã nguồn để anh em có thể góp ý, sửa lỗi và dùng lại cho mục đích học tập.</p>
+      <p class="os-disc">Mọi góp ý chỉnh sửa đều được hoan nghênh, nhất là các lỗi về tên loài, phân loại, tình trạng bảo tồn và vùng nuôi trồng.</p>
     </div>
   </section>
 
