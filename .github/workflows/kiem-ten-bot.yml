@@ -1,0 +1,43 @@
+name: Kiểm tên bot
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize]
+
+permissions: {}
+
+jobs:
+  kiem-ten-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Kiểm dòng Bot và Issue trong mô tả PR
+        env:
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: |
+          python3 <<'PY'
+          import os
+          import re
+          import sys
+
+          body = os.environ.get("PR_BODY") or ""
+          lines = body.replace("\r\n", "\n").replace("\r", "\n").split("\n")
+
+          bot_ok = False
+          issue_ok = False
+          for line in lines:
+              text = line.strip()
+              if re.match(r"^Bot:\s*\S", text):
+                  bot_ok = True
+              if re.match(r"^Issue:", text):
+                  issue_ok = True
+
+          errors = []
+          if not bot_ok:
+              errors.append("Thiếu dòng Bot: có nội dung (ví dụ: Bot: Bảo).")
+          if not issue_ok:
+              errors.append("Thiếu dòng Issue: (chưa có issue thì vẫn ghi Issue:).")
+          if errors:
+              print("\n".join(errors))
+              sys.exit(1)
+          print("OK: đã có dòng Bot: (không rỗng) và dòng Issue:.")
+          PY
